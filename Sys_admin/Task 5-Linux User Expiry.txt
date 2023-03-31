@@ -1,0 +1,21 @@
+A developer John has been assigned Nautilus project temporarily as a backup resource.
+ As a temporary resource for this project, we need a temporary user for John.
+ It’s a good idea to create a user with a set expiration date so that the user will not be able to access servers beyond that point.
+
+Therefore, create a user named john on the App Server 1. Set expiry date to 2021-12-07 in Stratos Datacenter.
+Make sure the user is created as per standard and is in lowercase.
+
+# SSH to App server 1
+ssh tony@stapp01
+
+# Add user with expiry
+sudo useradd -e 2021-12-07 john 
+
+# If the user already exists then use the following command
+sudo chage -E 2021-12-07 john 
+
+# verify
+sudo chage -l john 
+
+# Exit the app server
+exit

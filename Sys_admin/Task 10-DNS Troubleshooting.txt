@@ -1,0 +1,21 @@
+DNS Troubleshooting
+The system admins team of xFusionCorp Industries has noticed intermittent issues with DNS resolution in several apps . App Server 3 in Stratos Datacenter is having some DNS resolution issues, so we want to add some additional DNS nameservers on this server.
+
+As a temporary fix we have decided to go with Google public DNS. Please make appropriate changes on this server.
+
+Solution
+# SSH to app server 3.
+ssh banner@stapp03
+
+# Verify if DNS is really not working by doing a ping test.
+ping www.google.com
+
+# Edit /etc/resolv.conf and add nameserver for Google
+sudo vi /etc/resolv.conf
+# add nameserver 8.8.8.8
+
+# Test connectivity
+ping www.google.com
+
+#   Exit from server
+exit

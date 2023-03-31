@@ -1,0 +1,25 @@
+									Kodekloud engineer
+
+Task 1
+
+Allow all users to execute a script
+
+command : sudo chmod a+x <scriptname.sh>
+
+a= all users
+
+Task 2
+
+Create a user with non interactive shell
+
+check if the user alrdy exists
+command: id javed
+create user
+command:sudo adduser javed -s /sbin/nologin
+
+Task 3
+
+Changing time zone
+
+check the timezone first: timedatectl
+changing the timezone : sudo timedatectl set-timezone <timezone name>
